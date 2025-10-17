@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Pagina web de prueba</title>
+</head>
+<body>
+<style>
+body {
+  background-image: url('2025.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 900%;
+  background-position: center;
+
+}
+</style>
+
+</style>
+
+
+<h1 align="center" style="color: white;">Tragatodo, El De Las Recargas</h1>
+<table align="center" cellpadding="10" border="4" bordercolor="purple">
+<tr><td bgcolor="turquoise">
+<form id=form1 action="">
+    <p>
+        Q quieres comel? <input id=campo1 type="text" name="camp1" value="Escribe algo" maxlength="40">
+        <br>
+        
+        <input type="submit" value="buscar">
+
+    </p>
+</td></tr>
+
+
+<script>
+document.getElementById("form1").addEventListener("submit", function(event){
+    event.preventDefault();
+    
+
+    let campo1 = document.getElementById("campo1").value.trim();
+    
+
+     const redirecciones = {
+        "hamburguesa": "https://mcdonalds.es/productos",
+        "pizza": "https://www.dominospizza.es/",
+        "tacos": "https://tacobell.es/es/inicio",
+        "polla": "https://www.just-eat.es/a-domicilio/cerca-de-mi/pollo"
+    };
+
+    if(redirecciones[campo1]){
+        window.location.href = redirecciones[campo1];
+    } else {
+        alert("no conosco");
+    }
+});
+</script>
+
+</body>
+</html>
