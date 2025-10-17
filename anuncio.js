@@ -1,7 +1,7 @@
 // Lista de imágenes de "anuncios" (pueden ser gifs, jpg, png, etc.)
 const IMAGENES = [
   'gyat.gif',
-  '2025.jpg',
+  'https://i.pinimg.com/736x/87/d2/9d/87d29d962f35cafad45f866acbdba71b.jpg',
   'https://s.studiobinder.com/wp-content/uploads/2018/02/Funniest-Commercials-2017-Article-Header-StudioBinder-Production-Software.jpg'
 ];
 
@@ -41,4 +41,5 @@ function cerrarAnuncio(el) {
 }
 
 // Crear un anuncio nuevo cada 5 s
+
 setInterval(crearAnuncio, 5000);
