@@ -31,13 +31,13 @@ function crearAnuncio() {
   anuncio.appendChild(btn);
 
   // Posición aleatoria dentro de la ventana
-  anuncio.style.top = `${Math.random() * 70 + 20}%`;
-  anuncio.style.left = `${Math.random() * 70 + 20}%`;
+  anuncio.style.top = `${Math.random() * 40 + 10}%`;
+  anuncio.style.left = `${Math.random() * 40 + 10}%`;
 
   container.appendChild(anuncio);
 
   // El anuncio se elimina automáticamente después de 60 s
-  setTimeout(() => cerrarAnuncio(anuncio), 60000);
+  setTimeout(() => cerrarAnuncio(anuncio), 6000000);
 }
 
 // Cerrar anuncio con animación
@@ -49,4 +49,5 @@ function cerrarAnuncio(el) {
 // Crear un anuncio nuevo cada 5 s
 
 setInterval(crearAnuncio, 5000);
+
 
