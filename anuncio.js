@@ -31,7 +31,7 @@ function crearAnuncio() {
   anuncio.appendChild(btn);
 
   // Posición aleatoria dentro de la ventana
-  anuncio.style.top = `${Math.random() * 40 + 10}%`;
+  anuncio.style.top = `${Math.random() * 50 + 30}%`;
   anuncio.style.left = `${Math.random() * 90 + 20}%`;
 
   container.appendChild(anuncio);
@@ -49,6 +49,7 @@ function cerrarAnuncio(el) {
 // Crear un anuncio nuevo cada 5 s
 
 setInterval(crearAnuncio, 5000);
+
 
 
 
