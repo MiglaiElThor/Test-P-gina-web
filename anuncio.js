@@ -1,4 +1,4 @@
-// Lista de imágenes de "anuncios" (pueden ser gifs, jpg, png, etc.)
+// Lista de imágenes
 const IMAGENES = [
   'https://i.pinimg.com/736x/1d/f2/d7/1df2d7f4c88053d479d87b9457ac83e0.jpg',
   'https://i.pinimg.com/736x/87/d2/9d/87d29d962f35cafad45f866acbdba71b.jpg',
@@ -11,7 +11,7 @@ const IMAGENES = [
   'https://i.pinimg.com/736x/d6/8c/ff/d68cffce149286526dbec359b2aeaa41.jpg'
 ];
 
-// Contenedor donde se añaden
+// Contenedor
 const container = document.getElementById('anuncios-container');
 
 // Crear un anuncio en una posición aleatoria
@@ -30,25 +30,26 @@ function crearAnuncio() {
   anuncio.appendChild(img);
   anuncio.appendChild(btn);
 
-  // Posición aleatoria dentro de la ventana
+  // Posición aleatoria
   anuncio.style.top = `${Math.random() * 10 + 10}%`;
   anuncio.style.left = `${Math.random() * 90 + -20}%`;
 
   container.appendChild(anuncio);
 
-  // El anuncio se elimina automáticamente después de 60 s
+  // Eliminar anuncio automáticamente después de 60 s
   setTimeout(() => cerrarAnuncio(anuncio), 6000000);
 }
 
-// Cerrar anuncio con animación
+// Cerrar anuncio
 function cerrarAnuncio(el) {
   el.classList.add('cerrar');
   setTimeout(() => el.remove(), 400);
 }
 
-// Crear un anuncio nuevo cada 5 s
+// Crear anuncio
 
 setInterval(crearAnuncio, 5000);
+
 
 
 
