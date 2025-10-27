@@ -6,26 +6,31 @@ h1 {
   font-family: Verdana;
   color: #000000;
   font-weight: bold;
-  display: inline-block; /* necesario para transform */
-  animation: girarZoom 0.3s infinite; /* animación continua */
+  display: inline-block;
   font-size: 50px;
+  transform-origin: center;
+  
+ 
+  animation: rotarContinuo 2s linear infinite, zoomComico 1.5s ease-in-out infinite;
 }
 
-@keyframes girarZoom {
-  0% {
-    transform: rotate(0deg) scale(1);
+
+@keyframes rotarContinuo {
+  from {
+    transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(90deg) scale(1.2); /* rota y hace zoom in */
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes zoomComico {
+  0%, 100% {
+    scale: 1;
   }
   50% {
-    transform: rotate(180deg) scale(1); /* vuelve a tamaño normal */
-  }
-  75% {
-    transform: rotate(270deg) scale(0.8); /* rota y hace zoom out */
-  }
-  100% {
-    transform: rotate(360deg) scale(1); /* vuelve al inicio */
+    scale: 1.7;
   }
 }
 
@@ -52,7 +57,7 @@ h1 {
   animation: moverPez2 15s linear infinite;
 }
 
-/* Pez 1: se mueve de izquierda a derecha y gira cuando cambia de dirección */
+/* Pez 1 */
 @keyframes moverPez1 {
   0% {
     left: -100px;
@@ -70,7 +75,7 @@ h1 {
   }
 }
 
-/* Pez 2: empieza mirando hacia la izquierda (inverso al primero) */
+/* Pez 2 */
 @keyframes moverPez2 {
   0% {
     left: calc(100% + 100px);
