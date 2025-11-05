@@ -1,5 +1,6 @@
 const redirections = {
     'jurado': 'jurado.html',
+    'antonio': 'antonio.html',
 
 };
 
