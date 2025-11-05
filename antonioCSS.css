@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+img[src="Manipulación.gif"] {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 700px;
+    z-index: 1;
+}
+
+img[src="skeleton-dance.gif"] {
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+    width: 500px;
+    z-index: 1;
+}
+
+img[src="skeleton2.gif"] {
+    position: fixed;
+    bottom: -100px;
+    right: -500px;
+    width: 1500px;
+    z-index: 1;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.rotated-background {
+    position: absolute;
+    width: 100vh;
+    height: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    background: url('hypnosis.gif') center/cover;
+}
