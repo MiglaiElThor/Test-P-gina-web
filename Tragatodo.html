@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
  <title>Pagina web de prueba</title>
@@ -20,13 +20,12 @@ body {
 <h1 align="center" style="color: white;">Tragatodo, El De Las Recargas</h1>
 <table align="center" cellpadding="10" border="4" bordercolor="purple">
 <tr><td bgcolor="turquoise">
-<form id=form1 action="">
+<form id="form1" action="">
     <p>
-        Q quieres comel? <input id=campo1 type="text" name="camp1" value="Escribe algo" maxlength="40">
+        Q quieres comel? 
+        <input id="campo1" type="text" name="camp1" value="Escribe algo" maxlength="40" onclick="if(this.value=='Escribe algo')this.value='';">
         <br>
-        
         <input type="submit" value="buscar">
-
     </p>
 </td></tr>
 
@@ -57,4 +56,5 @@ document.getElementById("form1").addEventListener("submit", function(event){
 
 </body>
 </html>
+
 
