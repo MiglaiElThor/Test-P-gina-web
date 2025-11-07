@@ -1,6 +1,7 @@
 const redirections = {
     'jurado': 'jurado.html',
     'antonio': 'antonio.html',
+    'miglaitor': 'miglaitor.html',
 
 };
 
@@ -15,3 +16,4 @@ function handleRedirect() {
     input.value = '';
     return false;
 }
+
