@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Migaytor</title>
+  <link rel="stylesheet" href="miglaitorStyle.css" />
+</head>
+<body>
+  <img src="conocimiento.gif" alt="conocimiento místico" />
+
+  <div>
+    <img src="crystal_ball.png" alt="bola de cristal" id="crystalBall" />
+    <p id="mensajeMistico">SDIYBT</p>
+  </div>
+
+  <script>
+    const ball = document.getElementById("crystalBall");
+    const mensaje = document.getElementById("mensajeMistico");
+
+    let rotation = 0;
+    let scale = 1;
+    let textoMostrado = false;
+
+    ball.addEventListener("click", () => {
+      rotation += 360;
+      scale += 0.2;
+
+
+      ball.style.transform = `translateX(-50%) scale(${scale}) rotate(${rotation}deg)`;
+
+
+      if (scale >= 2.5 && !textoMostrado) {
+        mensaje.classList.add("visible");
+        textoMostrado = true;
+      }
+    });
+  </script>
+</body>
+</html>

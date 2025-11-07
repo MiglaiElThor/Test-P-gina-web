@@ -1,0 +1,52 @@
+body {
+  background-image: url("crystal_ball.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+}
+
+img[src="conocimiento.gif"] {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  width: 900px;
+  z-index: 1;
+}
+
+
+#crystalBall {
+  position: fixed;
+  left: 41%;
+  top: 70px;
+  width: 710px;
+  transform: translateX(-50%) scale(1) rotate(0deg);
+  transform-origin: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 1s ease;
+}
+
+
+#mensajeMistico {
+  position: fixed;
+  left: 41%;
+  top: 400px;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  font-family: "Papyrus", Papyrus, fantasy;
+  color: white;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: 6;
+  text-align: center;
+  pointer-events: none;
+}
+
+#mensajeMistico.visible {
+  opacity: 1;
+}
