@@ -37,7 +37,7 @@ img[src="conocimiento.gif"] {
   top: 350px;
   transform: translateX(-50%);
   font-size: 4rem;
-  font-family: "Papyrus", Papyrus-fallback, fantasy;
+  font-family: "Papyrus";
   color: white;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
   opacity: 0;
@@ -66,3 +66,4 @@ img[src="conocimiento.gif"] {
 #imagenMistica.visible {
   opacity: 1;
 }
+
