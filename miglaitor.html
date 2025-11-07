@@ -34,6 +34,7 @@
     { tipo: "imagen", valor: "usagi.jpg" },
     { tipo: "imagen", valor: "JOB.png" },
     { tipo: "imagen", valor: "https://i.pinimg.com/736x/0c/f8/00/0cf8000c9d88184ee10d43b8a13f261a.jpg" },
+    { tipo: "imagen", valor: "https://i.pinimg.com/1200x/33/da/a3/33daa3623c1fb03673084f5338def834.jpg" },
   ];
 
   ball.addEventListener("click", () => {
@@ -55,10 +56,31 @@
       revelado = true;
     }
   });
+  const fondoOriginal = "crystal_ball.jpg";
+const fondoAlterno = "crystal_ball2.jpg";
+
+function parpadeoMago() {
+  // Cambia el fondo al alterno (mago mirando)
+  document.body.style.backgroundImage = `url('${fondoAlterno}')`;
+
+  // Vuelve al fondo original después de 0.5 segundos
+  setTimeout(() => {
+    document.body.style.backgroundImage = `url('${fondoOriginal}')`;
+  }, 500);
+
+  // Programa el siguiente parpadeo con un tiempo aleatorio (5–25 segundos)
+  const siguiente = Math.random() * 10000 + 5000;
+  setTimeout(parpadeoMago, siguiente);
+}
+
+// Iniciar el primer parpadeo después de un tiempo aleatorio inicial
+setTimeout(parpadeoMago, Math.random() * 5000 + 3000);
 </script>
 
 
 
 </body>
 </html>
+
+
 
