@@ -11,43 +11,52 @@
 
   <div>
     <img src="crystal_ball.png" alt="bola de cristal" id="crystalBall" />
-    <p id="mensajeMistico">SDIYBT</p>
+    <p id="mensajeMistico"></p>
+    <img id="imagenMistica" src="" alt="imagen mística">
+
   </div>
 
 <script>
   const ball = document.getElementById("crystalBall");
   const mensaje = document.getElementById("mensajeMistico");
+  const imagen = document.getElementById("imagenMistica");
 
   let rotation = 0;
   let scale = 1;
-  let textoMostrado = false; // controla si ya se mostró el mensaje
+  let revelado = false;
 
-  // 🧙 Frases posibles
-  const frasesMisticas = [
-    "SDIYBT",
-    "67",
-    "185.169.22.59",
-    "Una <3",
-    "Bocata lomo ya"
+
+  const contenidos = [
+    { tipo: "texto", valor: "SDIYBT" },
+    { tipo: "texto", valor: "67" },
+    { tipo: "texto", valor: "185.169.22.59" },
+    { tipo: "texto", valor: "Bocata lomo ya" },
+    { tipo: "imagen", valor: "usagi.jpg" },
+    { tipo: "imagen", valor: "JOB.png" },
   ];
 
   ball.addEventListener("click", () => {
     rotation += 360;
     scale += 0.2;
-
     ball.style.transform = `translateX(-50%) scale(${scale}) rotate(${rotation}deg)`;
 
-    // Mostrar solo una vez un texto aleatorio
-    if (scale >= 2.5 && !textoMostrado) {
-      const frase = frasesMisticas[Math.floor(Math.random() * frasesMisticas.length)];
-      mensaje.textContent = frase;
-      mensaje.classList.add("visible");
-      textoMostrado = true; // evita que vuelva a cambiar
+    if (scale >= 2.5 && !revelado) {
+      const seleccion = contenidos[Math.floor(Math.random() * contenidos.length)];
+
+      if (seleccion.tipo === "texto") {
+        mensaje.textContent = seleccion.valor;
+        mensaje.classList.add("visible");
+      } else if (seleccion.tipo === "imagen") {
+        imagen.src = seleccion.valor;
+        imagen.classList.add("visible");
+      }
+
+      revelado = true;
     }
   });
 </script>
 
 
+
 </body>
 </html>
-
