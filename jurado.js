@@ -9,9 +9,9 @@ const images = [
 
 // textos
 const imageTexts = [
-    "Imagen 1: inspector jurado",
+    "Era una soleada mañana en Córdoba. Las campanas de la Mezquita-Catedral resonaban cuando un temblor hizo vibrar toda la ciudad. Los turistas miraron hacia el Puente Romano y gritaron: —¡Un cerdo gigante está cruzando el río Guadalquivir! En ese momento, el Inspector Jurado, el mejor (y más despistado) investigador de la ciudad, recibía una llamada urgente en su despacho. —Inspector, ¡el cerdo está devorando puestos de churros y jamón! —gritaba el jefe de policía por teléfono. Jurado, con su característico sombrero metálico lleno de artilugios, sonrió con calma. —Tranquilos, ciudadanos. ¡Adelante gadjeto-zampahamburguesas! De su sombrero salieron brazos mecánicos con una bandeja repleta de hamburguesas chispeantes. El inspector apuntó hacia el monstruoso cerdo y lanzó una a toda velocidad. El cerdo, confundido, la atrapó al vuelo… ¡y se quedó quieto, saboreándola! —Excelente… parece que le gusta —dijo Jurado, mientras activaba el modo automático de su invento. En segundos, una lluvia de hamburguesas cayó del cielo como si fueran confeti de pan y carne. El cerdo, encantado, empezó a comer sin parar hasta que, satisfecho, se tumbó y se durmió junto al río. Córdoba estaba a salvo. Los vecinos vitorearon: —¡Viva el Inspector Jurado! ¡Y sus hamburguesas mágicas! El inspector se rascó la cabeza, algo distraído, y murmuró para sí: —Bueno… quizás debería patentar el gadjeto-zampahamburguesas… pero antes, ¡una más para mí! Y así, entre aplausos y olor a hamburguesa, Jurado salvó otra vez la ciudad… a su manera.",
     "La imagen nos muestra a Jurado en sus primeros años, donde ya se evidenciaban los grandes desafíos que su peso le imponía. Acciones básicas, que para otros niños eran sencillas, para él representaban proezas que requerían un esfuerzo monumental. Sus padres eran testigos de su lucha diaria. Es en estos inicios donde se forjó su espíritu. Pequeñas victorias, como lograr levantarse para limpiarse el culo, eran símbolos conmovedores de autonomía y superación. Cada triunfo, por mínimo que fuera, le demostraba su capacidad. Estos logros diarios fueron los cimientos de su determinación y resiliencia, preparándolo para enfrentar los juicios del mundo y buscar su propio espacio.",
-    "",
+    "Esta historia se llama, La foca que no quería sonreír. En un rincón gris del océano vivía una foca con una expresión tan seria que las gaviotas la evitaban. Nunca reía, nunca jugaba con las olas. Solo flotaba, mirando el horizonte, como si estuviera esperando algo que no sabía nombrar. Un día, una ola enorme trajo hasta ella un espejo roto. Se vio reflejada por primera vez y pensó: —Vaya… así que por eso todos se alejan. Pero en ese instante, una pequeña burbuja salió de su nariz y estalló justo frente a su cara, haciéndola cosquillas. La foca soltó un sonido extraño, entre risa y resoplido. El mar respondió con un eco suave, casi como si también riera. Desde entonces, la foca siguió teniendo la misma cara seria… Pero de vez en cuando, cuando nadie la miraba, dejaba escapar una pequeña burbuja y sonreía bajo el agua.",
     "Jurado, un chico obeso, decidió hacerse un corte de pelo buzzcut. La simple tarea de ir a la peluquería se convirtió en un desafío debido a su peso y a las miradas y juicios de la gente. El transporte público, las puertas estrechas y las miradas constantes dificultaron su camino. Finalmente, llegó a la peluquería y, tras superar la dificultad de entrar, se hizo el corte de pelo. Al mirarse en el espejo, se sintió renovado y con más confianza. A pesar de los desafíos, Jurado se sintió fuerte y listo para enfrentar el mundo con su nuevo look",
     "Jurao Foca"
 ];
@@ -46,8 +46,8 @@ function positionIndicatorOverButton() {
     indicator.style.top = (rect.top + rect.height / 2 - ih / 2) + 'px';
 }
 
-// --- Right-side persistent text boxes (one per image) ---
-const TEXTBOX_WIDTH = 360; // px (aumentado)
+
+const TEXTBOX_WIDTH = 360;
 let textBoxes = [];
 
 function createTextBoxes() {
