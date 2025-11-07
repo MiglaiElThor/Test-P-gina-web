@@ -14,27 +14,40 @@
     <p id="mensajeMistico">SDIYBT</p>
   </div>
 
-  <script>
-    const ball = document.getElementById("crystalBall");
-    const mensaje = document.getElementById("mensajeMistico");
+<script>
+  const ball = document.getElementById("crystalBall");
+  const mensaje = document.getElementById("mensajeMistico");
 
-    let rotation = 0;
-    let scale = 1;
-    let textoMostrado = false;
+  let rotation = 0;
+  let scale = 1;
+  let textoMostrado = false; // controla si ya se mostró el mensaje
 
-    ball.addEventListener("click", () => {
-      rotation += 360;
-      scale += 0.2;
+  // 🧙 Frases posibles
+  const frasesMisticas = [
+    "SDIYBT",
+    "67",
+    "185.169.22.59",
+    "Una <3",
+    "Bocata lomo ya"
+  ];
+
+  ball.addEventListener("click", () => {
+    rotation += 360;
+    scale += 0.2;
+
+    ball.style.transform = `translateX(-50%) scale(${scale}) rotate(${rotation}deg)`;
+
+    // Mostrar solo una vez un texto aleatorio
+    if (scale >= 2.5 && !textoMostrado) {
+      const frase = frasesMisticas[Math.floor(Math.random() * frasesMisticas.length)];
+      mensaje.textContent = frase;
+      mensaje.classList.add("visible");
+      textoMostrado = true; // evita que vuelva a cambiar
+    }
+  });
+</script>
 
 
-      ball.style.transform = `translateX(-50%) scale(${scale}) rotate(${rotation}deg)`;
-
-
-      if (scale >= 2.5 && !textoMostrado) {
-        mensaje.classList.add("visible");
-        textoMostrado = true;
-      }
-    });
-  </script>
 </body>
 </html>
+
