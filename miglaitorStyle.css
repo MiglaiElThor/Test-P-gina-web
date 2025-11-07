@@ -1,12 +1,12 @@
 body {
-  background-image: url("crystal_ball.jpg");
+  background-image: url('crystal_ball.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
-  margin: 0;
+  transition: background-image 0.3s ease;
 }
+
 
 img[src="conocimiento.gif"] {
   position: fixed;
