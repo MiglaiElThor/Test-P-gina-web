@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Papyrus";
-  src: url("fonts/Papyrus.ttf") format("truetype");
+  src: url("Papyrus.ttf") format("truetype");
 }
 
 body {
@@ -71,5 +71,6 @@ img[src="conocimiento.gif"] {
 #imagenMistica.visible {
   opacity: 1;
 }
+
 
 
