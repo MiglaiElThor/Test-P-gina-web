@@ -2,6 +2,7 @@ const redirections = {
     'jurado': 'jurado.html',
     'antonio': 'antonio.html',
     'miglaitor': 'miglaitor.html',
+    'twin': 'jla.html',
 
 };
 
@@ -16,4 +17,5 @@ function handleRedirect() {
     input.value = '';
     return false;
 }
+
 
