@@ -1,6 +1,6 @@
 const fondosPorTema = {
   twin: ["meowl.jpg", "meowl_twin.png"],
-  jojolion: ["temp.png", "temp.png"],
+  jojolion: ["yasuo.png", "yasuo_twin.png"],
   Chiikawa: ["hachiware.png", "hachiware_twin.png"]
 };
 
@@ -32,3 +32,4 @@ radios.forEach(radio => {
 });
 
 window.addEventListener("load", mostrarFondo);
+
